@@ -1,0 +1,26 @@
+{
+  "name": "pagehook",
+  "version": "0.1.0",
+  "description": "DOM based simple pagehook",
+  "main": "lib/pagehook.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "prepublish": "grunt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "labocho <labocho@penguinlab.jp>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/labocho/pagehook"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-coffee": "0.0.6",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-coffee": "~0.10.1"
+  }
+}

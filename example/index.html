@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <title>Pagehook</title>
+</head>
+<p>See console.</p>
+<script src="../lib/pagehook.js"></script>
+<script>
+(function() {
+    Pagehook.register("name/of/action", function(args) {
+        console.log("Called");
+        console.log(args);
+    });
+
+    Pagehook.register("name/of/action", function(args) {
+        console.log("Called second");
+    });
+
+    // You can register also by map
+    Pagehook.register({
+        "another/name/of/action": function(args) {
+            console.log("Called another");
+            console.log(args);
+        },
+        "other/name/of/action": function(args) {
+            console.log("Do not called");
+        }
+    });
+    // "@global" special hook always called first
+    Pagehook.register("@global", function() {
+        console.log("@global hook");
+    });
+
+    document.addEventListener("DOMContentLoaded", Pagehook.handler);
+    // If you use turbolinks
+    // document.addEventListener("page:change", Pagehook.handler);
+}());
+</script>
+<script type="application/json" data-pagehook="name/of/action">{"foo": 1, "bar": 2}</script>
+<script type="application/json" data-pagehook="another/name/of/action">["any", "of", "json", "allowed"]</script>
+<script type="application/json" data-pagehook="another/name/of/action"></script>
