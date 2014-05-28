@@ -20,7 +20,7 @@ Example
 
     <!-- Register event handler -->
     <script>
-    document.addEventHandler("DOMContentLoaded", Pagehook.handler);
+    document.addEventListener("DOMContentLoaded", Pagehook.handler);
     </script>
 
     <!-- Put trigger element on each page -->
@@ -76,7 +76,7 @@ Event handler
 
 You should register event handler `Pagehook.handler` for `DOMContentLoaded`.
 
-    document.addEventHandler("DOMContentLoaded", Pagehook.handler);
+    document.addEventListener("DOMContentLoaded", Pagehook.handler);
 
 If you use jQuery, you can also do this.
 
@@ -84,7 +84,7 @@ If you use jQuery, you can also do this.
 
 If you use [turbolinks](https://github.com/rails/turbolinks), you should do this.
 
-    document.addEventHandler("page:change", Pagehook.handler);
+    document.addEventListener("page:change", Pagehook.handler);
 
 
 Trigger element
