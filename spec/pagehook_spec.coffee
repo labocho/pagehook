@@ -3,7 +3,7 @@ describe "Pagehook", ->
   beforeEach ->
     window.d = false
     result = []
-    Pagehook.instance.definitions = [] # clear hooks
+    Pagehook.instance.definitions = {} # clear hooks
     Pagehook.register "foo", ->
       result.push "First"
     Pagehook.register "foo", ->

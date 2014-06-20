@@ -10,26 +10,25 @@
     @instance.dispatch(args...)
 
   constructor: ->
-    @definitions = []
+    @definitions = {}
     @handler = =>
       @handlerUnbound()
 
-  # Pagehook.register "name", (args)-> ...
+  # Pagehook.register "name", (arg)-> ...
   # # or
   # Pagehoook.register
-  #   name: (args)->
+  #   name: (arg)->
   register: (name_or_map, func) ->
     if typeof(name_or_map) == "string"
-      @definitions.push [name_or_map, func]
+      (@definitions[name_or_map] ||= []).push(func)
     else
       for name, func of name_or_map
-        @definitions.push [name, func]
+        @register(name, func)
 
   # Pagehook.dispatch("name", {foo: 1, bar: 2})
-  dispatch: (name, params) ->
-    for [registered, func] in @definitions
-      if registered == name
-        func(params)
+  dispatch: (name, arg) ->
+    if @definitions[name]
+      func(arg) for func in @definitions[name]
 
   # Event handler for DOMContentLoaded or page:change (turbolinks)
   # Use `handler` property instead of this
@@ -38,8 +37,8 @@
 
     for e in document.querySelectorAll("[#{Pagehook.ATTRIBUTE_NAME}]")
       name = e.getAttribute(Pagehook.ATTRIBUTE_NAME)
-      args = if @isBlank(e.textContent) then undefined else JSON.parse(e.textContent)
-      @dispatch(name, args)
+      arg = if @isBlank(e.textContent) then undefined else JSON.parse(e.textContent)
+      @dispatch(name, arg)
 
   isBlank: (string)->
     !!(string.match(/^\s*$/))
