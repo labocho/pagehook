@@ -30,6 +30,8 @@ Example
 Installation
 --------------------
 
+### bower
+
 If you use [bower](http://bower.io/), run this.
 
     bower install pagehook
@@ -38,7 +40,19 @@ and load `dist/pagebook.js`.
 
     <script src="bower_components/pagehook/dist/pagebook.js"></script>
 
-Or copy [dist/pagebook.js](https://raw.githubusercontent.com/labocho/pagehook/master/dist/pagehook.js) to your project simply.
+### npm
+
+If you use npm, run this.
+
+    npm install --save-dev pagehook
+
+and write `require("pagehook")` in your code.
+
+    var Pagehook = require("pagehook");
+
+### copy
+
+Copy [dist/pagebook.js](https://raw.githubusercontent.com/labocho/pagehook/master/dist/pagehook.js) to your project.
 
 
 Defining hooks

@@ -6,10 +6,6 @@
   "directories": {
     "example": "example"
   },
-  "scripts": {
-    "prepublish": "grunt",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "labocho <labocho@penguinlab.jp>",
   "repository": {
     "type": "git",
