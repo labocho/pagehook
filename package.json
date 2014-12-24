@@ -1,6 +1,6 @@
 {
   "name": "pagehook",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DOM based simple pagehook",
   "main": "lib/pagehook.js",
   "directories": {
@@ -17,10 +17,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-coffee": "0.0.6",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-coffee": "~0.10.1"
+    "browserify": "~7.0.3",
+    "gulp": "~3.8.10",
+    "vinyl-source-stream": "~1.0.0",
+    "coffeeify": "~1.0.0",
   }
 }

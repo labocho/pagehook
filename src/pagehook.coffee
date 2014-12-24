@@ -1,4 +1,4 @@
-@Pagehook = class Pagehook
+Pagehook = class Pagehook
   @GLOBAL_HOOK_NAME = "@global"
   @ATTRIBUTE_NAME = "data-pagehook"
 
@@ -29,6 +29,9 @@
   dispatch: (name, arg) ->
     if @definitions[name]
       func(arg) for func in @definitions[name]
+    else
+      unless name == Pagehook.GLOBAL_HOOK_NAME
+        console.log("Pagehook for #{name} is undefined")
 
   # Event handler for DOMContentLoaded or page:change (turbolinks)
   # Use `handler` property instead of this
@@ -44,5 +47,7 @@
     !!(string.match(/^\s*$/))
 
 # instanciate singleton object
-@Pagehook.instance = new Pagehook()
-@Pagehook.handler = @Pagehook.instance.handler
+Pagehook.instance = new Pagehook()
+Pagehook.handler = Pagehook.instance.handler
+
+module.exports = Pagehook
