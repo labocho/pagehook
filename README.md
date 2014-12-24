@@ -34,11 +34,11 @@ If you use [bower](http://bower.io/), run this.
 
     bower install pagehook
 
-and load `lib/pagebook.js`.
+and load `dist/pagebook.js`.
 
-    <script src="bower_components/pagehook/lib/pagebook.js"></script>
+    <script src="bower_components/pagehook/dist/pagebook.js"></script>
 
-Or copy [lib/pagebook.js](https://raw.githubusercontent.com/labocho/pagehook/master/lib/pagehook.js) to your project simply.
+Or copy [dist/pagebook.js](https://raw.githubusercontent.com/labocho/pagehook/master/dist/pagehook.js) to your project simply.
 
 
 Defining hooks

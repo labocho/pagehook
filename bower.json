@@ -1,7 +1,7 @@
 {
   "name": "pagehook",
   "version": "0.1.1",
-  "main": "lib/pagehook.js",
+  "main": "dist/pagehook.js",
   "authors": [
     "labocho <labocho@penguinlab.jp>"
   ],
