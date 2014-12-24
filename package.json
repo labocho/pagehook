@@ -19,7 +19,6 @@
   "devDependencies": {
     "browserify": "~7.0.3",
     "gulp": "~3.8.10",
-    "vinyl-source-stream": "~1.0.0",
-    "coffeeify": "~1.0.0",
+    "vinyl-source-stream": "~1.0.0"
   }
 }
