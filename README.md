@@ -98,7 +98,8 @@ If you use jQuery, you can also do this.
 
 If you use [turbolinks](https://github.com/rails/turbolinks), you should do this.
 
-    document.addEventListener("page:change", Pagehook.handler);
+    document.addEventListener("DOMContentLoaded", Pagehook.handler);
+    document.addEventListener("page:load", Pagehook.handler);
 
 
 Trigger element
