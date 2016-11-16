@@ -52,7 +52,7 @@ Pagehook.prototype.dispatch = function(name, arg) {
   }
 };
 
-// Event handler for DOMContentLoaded or page:change (turbolinks)
+// Event handler for DOMContentLoaded or turbolinks:load (turbolinks)
 // Use `handler` property instead of this
 Pagehook.prototype.handlerUnbound = function() {
   var elements, i, e, name, arg;

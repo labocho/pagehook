@@ -96,9 +96,11 @@ If you use jQuery, you can also do this.
 
     $(Pagehook.handler);
 
-If you use [turbolinks](https://github.com/rails/turbolinks), you should do this.
+If you use [Turbolinks](https://github.com/turbolinks/turbolinks), you should do this.
 
-    document.addEventListener("DOMContentLoaded", Pagehook.handler);
+    // for Turbolinks (>= 5.0.0)
+    document.addEventListener("turbolinks:load", Pagehook.handler);
+    // for Turbolinks Classic (<= 2.5.3)
     document.addEventListener("page:load", Pagehook.handler);
 
 
