@@ -56,6 +56,10 @@ class Pagehook {
     }
   };
 
+  clear() {
+    this.definitions = {};
+  };
+
   // Event handler for DOMContentLoaded or turbolinks:load (turbolinks)
   // Use `handler` property instead of this
   private handlerUnbound() {
