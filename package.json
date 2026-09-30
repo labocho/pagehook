@@ -1,6 +1,6 @@
 {
   "name": "pagehook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DOM based simple pagehook",
   "main": "dist/pagehook.js",
   "directories": {
