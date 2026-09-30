@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import Pagehook from "../src/pagehook"
+import { Pagehook } from "../src/pagehook"
 
 function createElement(tag: string, attrs: {[key: string]: string}, text: string): HTMLElement {
   const e = document.createElement(tag) as HTMLElement;

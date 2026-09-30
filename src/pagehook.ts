@@ -85,4 +85,4 @@ class Pagehook {
 Pagehook.instance = new Pagehook();
 Pagehook.handler = Pagehook.instance.handler;
 
-export default Pagehook;
+export { Pagehook };
