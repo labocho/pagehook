@@ -14,7 +14,8 @@ declare class Pagehook {
     static dispatch(name: string, arg?: any): void;
     register(name_or_map: (string | Hooks), func: Hook): void;
     dispatch(name: string, arg?: any): void;
+    clear(): void;
     private handlerUnbound;
     private isBlank;
 }
-export default Pagehook;
+export { Pagehook };
